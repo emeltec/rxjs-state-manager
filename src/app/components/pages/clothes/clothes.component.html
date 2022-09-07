@@ -1,0 +1,8 @@
+
+<div class="ui container" *ngIf="products.length > 0" >
+  <div class="ui cards products">
+    <ng-container *ngFor="let product of products">
+      <app-product [product]="product"></app-product>
+    </ng-container>
+  </div>
+</div>

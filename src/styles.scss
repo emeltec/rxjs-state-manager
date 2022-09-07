@@ -1,1 +1,132 @@
-/* You can add global styles to this file, and also import other style files */
+.info-total {
+  max-width: 380px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.products-cart {
+  .product {
+    padding-bottom: 15px;
+  }
+  
+  .product-info {
+    display: flex;
+    background: #f1f1f1;
+    border-radius: 5px;
+  }
+  
+  .product-image {
+    width: 134px
+  }
+  
+  .product-image img {
+    width: 100%;
+    border-radius: 5px 0 0 5px;
+    height: 100%;
+  }
+  
+  .product-description {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+  }
+  
+  .product-name {
+    font-size: 1.3rem;
+    padding-bottom: 7px;
+    font-weight: 700;
+  }
+  
+  .product-price {
+    font-size: 1.5rem;
+    padding-top: 7px;
+    font-weight: 700;
+  }
+
+  .product-options {
+    display: inline-block; padding-top: 10px;
+  }
+}
+
+/* Products */
+
+.products {
+  .product-details {
+    display: flex; flex-direction: row;
+  }
+
+  .image {
+    width: 32%;
+    & img {
+      width:100%;
+    }
+  }
+  
+  .product-info {
+    margin-left: 10px;
+  }
+
+  .product-name {
+    font-size: 1.3rem; padding-bottom: 7px; font-weight: 700;
+  }
+
+  .product-price {
+    font-size: 1.5rem; padding-top: 7px; font-weight: 700;
+  }
+}
+
+
+.ui.card .content, .ui.cards .card .content {
+  flex-grow: 1;
+  border: none;
+  border-top: 1px solid rgba(34,36,38,.1);
+  background: 0 0;
+  margin: 0;
+  padding: 1em 1em;
+  box-shadow: none;
+  font-size: 1em;
+  border-radius: 0;
+}
+
+.ui.cards .card {
+  display: flex;
+  margin: 0.875em 0.5em;
+  float: none;
+}
+
+.ui.card, .ui.cards .card {
+  max-width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 290px;
+  min-height: 0;
+  background: #fff;
+  padding: 0;
+  border: none;
+  border-radius: 0.28571429rem;
+  box-shadow: 0 1px 3px 0 #d4d4d5, 0 0 0 1px #d4d4d5;
+  transition: box-shadow .1s ease,transform .1s ease;
+  z-index: '';
+}
+
+.products .ui.button {
+  margin: 0px !important;
+  border-radius: 0px !important;
+}
+
+
+
+.badge {
+  background-color: #a333c8!important;
+  border-color: #a333c8!important;
+  border-radius: 10px;
+  color: white;
+  display: inline-block;
+  font-size: 12px;
+  line-height: 1;
+  padding: 3px 7px;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+}

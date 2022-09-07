@@ -1,0 +1,44 @@
+
+<div class="info-total">
+  <div class="ui purple message">
+    <div class="header">
+      Total: $ 120.58 
+    </div>
+  </div>
+</div>
+
+<div class="ui middle aligned center aligned grid">
+  <div class="ui products-cart">
+    <div class="product" *ngFor="let prod of products">
+      <div class="product-info">
+        <div class="product-image">
+          <img [src]="prod?.image" alt="d">
+        </div>
+        <div class="product-description">
+          <div class="product-details">
+            <div class="product-name">{{ prod?.name }}</div>
+            <div>{{ prod?.description }}</div>
+            <div class="product-price">$ {{ prod?.price }} </div>
+          </div>
+          <div class="product-options">
+            <button class="ui icon button">
+              <i class="plus icon"></i>
+            </button>
+            <span style="padding: 0 15px; font-weight: 700; font-size: 1.3rem;">5</span>
+            <button class="ui icon button">
+              <i class="minus icon"></i>
+            </button>
+            <span>
+              <button class="ui icon button basic red" style="margin-left: 15px;">
+                <i class="trash icon"></i>
+                Delete
+              </button>
+            </span>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  </div>

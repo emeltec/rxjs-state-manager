@@ -1,0 +1,33 @@
+<div class="ui container" *ngIf="products.length > 0" >
+  <div class="ui cards products">
+    <ng-container *ngFor="let product of products">
+      <app-product [product]="product"></app-product>
+    </ng-container>
+  </div>
+</div>
+
+
+<!-- 
+<div class="ui container">
+  <div class="ui cards products">
+    <div class="card" *ngFor="let prod of products">
+      <div class="content product-details">
+        <div class="image">
+          <img [src]="prod?.image" alt="d">
+        </div>
+        <div class="product-info">
+          <div class="product-name">{{ prod?.name }}</div>
+          <div class="description">
+            {{ prod?.description }}
+          </div>
+          <div class="product-price">$ {{ prod?.price }} </div>
+        </div>
+      </div>
+      <div class="ui bottom button btn-cart">
+        <i class="cart plus icon"></i>
+        Add to cart
+      </div>
+    </div>
+  </div>
+</div> -->
+

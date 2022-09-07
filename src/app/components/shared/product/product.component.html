@@ -1,0 +1,18 @@
+<div class="card">
+  <div class="content product-details">
+    <div class="image">
+      <img [src]="product.image" alt="d">
+    </div>
+    <div class="product-info">
+      <div class="product-name">{{ product.name }}</div>
+      <div class="description">
+        {{ product.description }}
+      </div>
+      <div class="product-price">$ {{ product.price }} </div>
+    </div>
+  </div>
+  <div class="ui bottom button btn-cart">
+    <i class="cart plus icon"></i>
+    Add to cart
+  </div>
+</div>
