@@ -1,13 +1,12 @@
-
 <div class="info-total">
   <div class="ui purple message">
     <div class="header">
-      Total: $ 120.58 
+      Total: $ 120.58
     </div>
   </div>
 </div>
 
-<div class="ui middle aligned center aligned grid">
+<div class="ui cards middle aligned center aligned grid">
   <div class="ui products-cart">
     <div class="product" *ngFor="let prod of products">
       <div class="product-info">
@@ -34,11 +33,17 @@
                 Delete
               </button>
             </span>
-            
+
           </div>
         </div>
       </div>
     </div>
   </div>
-  
-  </div>
+</div>
+
+<div class="ui middle aligned center aligned grid" style="padding-bottom: 20px;">
+  <button class="ui inverted orange button">
+    <i class="trash alternate icon"></i>
+    Empty cart
+  </button>
+</div>
