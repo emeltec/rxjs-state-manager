@@ -41,10 +41,21 @@
     font-size: 1.5rem;
     padding-top: 7px;
     font-weight: 700;
+
+    & .unit-price {
+      font-size: 14px;
+      font-weight: 400;
+      color: grey;
+      margin-left: 10px;
+    }
   }
 
   .product-options {
     display: inline-block; padding-top: 10px;
+
+    & .quantity {
+      padding: 0 15px; font-weight: 700; font-size: 1.3rem;
+    }
   }
 }
 

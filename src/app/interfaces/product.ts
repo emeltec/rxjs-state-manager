@@ -5,3 +5,7 @@ export interface IProduct {
   price: number;
   image: string;
 }
+
+export interface IProductCart extends IProduct {
+  quantity: number;
+}

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Products } from 'src/app/data/products';
-import { IProduct } from 'src/app/interfaces/product';
+import { IProduct, IProductCart } from 'src/app/interfaces/product';
+import { StoreService } from 'src/app/store/store.service';
+import { calculateTotal } from 'src/app/utils/calculate';
 
 @Component({
   selector: 'app-products-cart',
@@ -9,12 +11,35 @@ import { IProduct } from 'src/app/interfaces/product';
 })
 export class ProductsCartComponent implements OnInit {
 
-  products: IProduct[] = [];
+  products: IProductCart[] = [];
+  totalGlobal:number = 0.00;
 
-  constructor() { }
+  constructor(private store: StoreService) { }
 
   ngOnInit() {
-    this.products = Products.tecnology;
+    this.store.getProducts().subscribe(products => {
+      this.products = products;
+      this.totalGlobal = calculateTotal(products);
+    })
+    
   }
+
+  deleteAllProducts() {
+    this.store.deleteAllProducts();
+  }
+
+  deleteProduct(id: number) {
+    this.store.deleteProduct(id);
+  }
+
+  addOne(id:number) {
+    this.store.addOne(id)
+  }
+
+  deleteOne(id:number) {
+    this.store.deleteOne(id);
+  }
+
+  
 
 }

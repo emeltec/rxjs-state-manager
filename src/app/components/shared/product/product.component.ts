@@ -1,5 +1,6 @@
 import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
-import { IProduct } from 'src/app/interfaces/product';
+import { IProduct, IProductCart } from 'src/app/interfaces/product';
+import { StoreService } from 'src/app/store/store.service';
 
 @Component({
   selector: 'app-product',
@@ -10,11 +11,17 @@ export class ProductComponent implements OnInit {
 
   @Input() product: IProduct = {} as IProduct;
 
-  constructor() {
+  constructor(private store: StoreService) {
 
   }
 
   ngOnInit() {
+  }
+
+  addProduct(product: IProduct) {
+    let prodCart:IProductCart = {...product, quantity: 1};
+    console.log(prodCart)
+    this.store.addProduct(prodCart);
   }
 
 }

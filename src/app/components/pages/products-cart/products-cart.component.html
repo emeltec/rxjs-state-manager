@@ -2,7 +2,7 @@
   <div class="info-total">
     <div class="ui purple message">
       <div class="header">
-        Total: $ 120.58
+        Total: $ {{ totalGlobal }}
       </div>
     </div>
   </div>
@@ -18,18 +18,21 @@
             <div class="product-details">
               <div class="product-name">{{ prod?.name }}</div>
               <div>{{ prod?.description }}</div>
-              <div class="product-price">$ {{ prod?.price }} </div>
+              <div class="product-price">$ {{ prod?.price }} 
+                <span style="display:none" *ngIf="prod.quantity > 1" class="unit-price">(Unit: ${{ prod?.price }})</span> 
+              </div>
             </div>
             <div class="product-options">
-              <button class="ui icon button">
+              <button class="ui icon button" (click)="addOne(prod.id)">
                 <i class="plus icon"></i>
               </button>
-              <span style="padding: 0 15px; font-weight: 700; font-size: 1.3rem;">5</span>
-              <button class="ui icon button">
+              <span class="quantity">{{prod?.quantity}}</span>
+              <button class="ui icon button" (click)="deleteOne(prod.id)">
                 <i class="minus icon"></i>
               </button>
               <span>
-                <button class="ui icon button basic red" style="margin-left: 15px;">
+                <button class="ui icon button basic red" style="margin-left:15px;" 
+                  (click)="deleteProduct(prod.id)">
                   <i class="trash icon"></i>
                   Delete
                 </button>
@@ -43,7 +46,7 @@
   </div>
 
   <div class="ui middle aligned center aligned grid" style="padding-bottom: 20px;">
-    <button class="ui inverted orange button">
+    <button class="ui inverted orange button" (click)="deleteAllProducts()">
       <i class="trash alternate icon"></i>
       Empty cart
     </button>

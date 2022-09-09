@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { StoreService } from 'src/app/store/store.service';
+import { counterProducts } from 'src/app/utils/counter';
 
 @Component({
   selector: 'app-header',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  countProducts:number = 0;
+
+  constructor(private store: StoreService) { }
 
   ngOnInit() {
+    this.store.getProducts().subscribe(products => {
+      this.countProducts = counterProducts(products);
+    })
   }
 
 }
