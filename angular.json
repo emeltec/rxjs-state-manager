@@ -32,8 +32,7 @@
             ],
             "styles": [
               "src/styles.scss",
-              "src/assets/css/semantic.min.css",
-              "src/assets/icons/font/bootstrap-icons.css"
+              "src/assets/css/semantic.min.css"
             ],
             "scripts": [
               
