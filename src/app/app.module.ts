@@ -8,6 +8,7 @@ import { HeaderComponent } from './components/shared/header/header.component';
 import { ProductsCartComponent } from './components/pages/products-cart/products-cart.component';
 import { TecnologyComponent } from './components/pages/tecnology/tecnology.component';
 import { ProductComponent } from './components/shared/product/product.component';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,9 @@ import { ProductComponent } from './components/shared/product/product.component'
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    { provide: LocationStrategy, useClass: HashLocationStrategy }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
