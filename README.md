@@ -1,6 +1,6 @@
 # RxjsStateManager
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.0.
+Prueba la aplicación aquí: [Rxjs State Manager](https://emeltec.github.io/rxjs-state-manager/tecnology)
 
 ## Development server
 
