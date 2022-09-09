@@ -20,7 +20,6 @@ export class ProductComponent implements OnInit {
 
   addProduct(product: IProduct) {
     let prodCart:IProductCart = {...product, quantity: 1};
-    console.log(prodCart)
     this.store.addProduct(prodCart);
   }
 
